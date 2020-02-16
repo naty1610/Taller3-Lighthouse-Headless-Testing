@@ -7,12 +7,14 @@ module.exports = {
     passes: [{
         passName: 'defaultPass',
         gatherers: [
-            'card-gatherer'
+            'card-gatherer',
+            'firstcall-gatherer'
         ]
     }],
 
     audits: [
-        'card-audit'
+        'card-audit',
+        'firstcall-audit'
     ],
 
     categories: {
@@ -20,7 +22,8 @@ module.exports = {
             name: 'Ratp pwa metrics',
             description: 'Metrics for the ratp timetable site',
             auditRefs: [
-                {id: 'card-audit', weight: 1}
+                {id: 'card-audit', weight: 1},
+                {id: 'firstcall-audit', weight: 2}
             ]
         }
     }

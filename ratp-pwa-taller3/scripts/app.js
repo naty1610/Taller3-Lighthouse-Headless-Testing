@@ -138,9 +138,13 @@
     }
 
     function getStationsFromNetwork(key) {
+        var hourInit = new Date();
         var url = 'https://api-ratp.pierre-grimaud.fr/v3/schedules/' + key;
         return fetch(url, { method: 'GET' })
             .then((response) => {
+                var hourFinish = new Date();
+                window.firstCallLoadTime  = hourFinish-hourInit;
+                console.log("carga inicial en milisegundos:",hourFinish-hourInit);
                 return response.json();
             })
             .catch(() => {
