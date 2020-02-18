@@ -42,3 +42,18 @@ Con este código importamos la librería de workbox-sw.js la cual nos permite al
 ![](https://github.com/naty1610/ratp-pwa-taller1/blob/master/images/reporte_local_pwa.jpg)
 #### Reporte Firebase
 ![](https://github.com/naty1610/ratp-pwa-taller1/blob/master/images/reporte_firebase.png)
+
+# Taller3 Lighthouse y Headless Testing 
+
+Se agregó en el script app.js la siguiente línea de código en el método <pre><code>app.updateTimetableCard</code></pre> :
+
+<pre><code>window.cardLoadTime = performance.now();</code></pre>
+
+Se ejecuta la prueba de Lighthouse con los cambios realizados y se obtiene:
+
+![](https://github.com/naty1610/Taller3-Lighthouse-Headless-Testing/blob/master/static/punto-1.6.jpg)
+
+Para el punto 1.7 se creó un nuevo Audit para mirar si el primer llamado al API de la ratp, con respuesta, toma menos de 3 segundos y se modificó el método <pre><code>getStationsFromNetwork</code></pre>. Dando como resultado:
+
+![](https://github.com/naty1610/Taller3-Lighthouse-Headless-Testing/blob/master/static/punto-1.7.jpg)
+
